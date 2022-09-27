@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-27T15:34:18.023Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 OPR/90.0.4480.84" etag="vbjhFvizhhzIu_DAyvbO" version="20.3.7" type="github">
+<mxfile host="app.diagrams.net" modified="2022-09-27T15:34:56.968Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 OPR/90.0.4480.84" etag="hNfMi2qxRzQ67CyNFJ3c" version="20.3.7" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="998" dy="540" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -119,7 +119,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="1D8Z9fWcGApWcsaOd2ik-0" value="Type: expressive culture | reserved culture&#xa;Eye-contact style: duration and intensity of eye contacts&#xa;Gestures; yes/no, Ok, good luck&#xa;Touch: shaking hands, kissing, hugs, and other physical contact&#xa;Respect for distance and physical space.&#xa;Time management.&#xa;Communication styles. [Volume, rhythm, tone ]" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="403" y="20" width="370" height="120" as="geometry" />
+          <mxGeometry x="430" y="10" width="370" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
