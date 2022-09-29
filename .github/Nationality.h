@@ -5,6 +5,7 @@
 #define GITHUB_NATIONALITY_H
 
 #include <iostream>
+#include <string>
 
 using std::vector;
 using std::endl;
