@@ -3,3 +3,8 @@
 //
 
 #include "Sistema.h"
+#include <iostream>
+
+void Sistema::agrgarCandidato() {
+
+}
