@@ -47,6 +47,7 @@ void Sistema::agrgarCandidato() {
 
 }
 
+
 void Sistema::InfoNacionalidadGales() {
     string name = "Gales";
     string demonym = "Galés";
