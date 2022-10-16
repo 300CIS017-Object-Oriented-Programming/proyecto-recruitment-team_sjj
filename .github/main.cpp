@@ -11,15 +11,15 @@ using std::string;
 
 void menuReclutador(){
     cout << "\n" << "********Bienvenido a ParkingSoft********\n";
-    cout << "   1. Crear candidato\n";
-    cout << "   2. Programar entrevista\n";
-    cout << "   3. Crear carta de aprobacion \n";
-    cout << "   0. Regresar\n";
-    cout << "Opción: ";
-    cout << "-1. salir\n";
+    cout << "   1. Create candidate\n";
+    cout << "   2. schedule interview\n";
+    cout << "   3. Create approval letter\n";
+    cout << "   0. Back\n";
+    cout << "Option: ";
+    cout << "-1. Exit\n";
 }
 //comprobar el conflicto
-void rmenu(Sistema & sistema){
+void menu(Sistema & sistema){
     int opt;
     do{
         menuReclutador();
@@ -29,7 +29,10 @@ void rmenu(Sistema & sistema){
             case 0:
                 break;
             case 1:
-
+                cout<<"desea agregar un nuevo usuario 1.si/2.no?"<<endl; cin>>opc;
+                if(opc=1) {
+                    sistema.agrgarCandidato();
+                }
                 break;
             case 2:
 
@@ -38,7 +41,7 @@ void rmenu(Sistema & sistema){
 
                 break;
             default:
-                cout << "Por favor, seleccione una opción válida\n";
+                cout << "Please select a valid option\n";
         }
     } while( opt != -1);
 }
