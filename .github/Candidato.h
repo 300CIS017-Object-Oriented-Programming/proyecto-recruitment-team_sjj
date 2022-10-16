@@ -23,8 +23,9 @@ private:
     string urlGitHub;
     int numPassport;
     string position;
-    string nationality;
+    int nationality;
     string resum;
+    void inicializarDatos();
 public:
     Candidato(); //constructor
     ~Candidato(); //destructor
@@ -48,6 +49,8 @@ public:
     void setPosition(const string &position);
     void setNationality(const string &nationality);
     void setResum(const string &resum);
+
+    Candidato(string name, int age, string urlLinkedIn, string urlGitHub, int numPassport, int nationality);
 
     void mostrarDatos();
 };

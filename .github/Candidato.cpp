@@ -14,8 +14,9 @@ Candidato::Candidato() {
     urlGitHub = "";
     numPassport = 0;
     position = "";
-    nationality = "";
+    nationality = 0;
     resum = "";
+    inicializarDatos();
 }
 
 void Candidato::mostrarDatos() {
