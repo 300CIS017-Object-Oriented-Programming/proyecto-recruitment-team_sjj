@@ -33,6 +33,7 @@ public:
     ~Nationality();
 
     void addNationalityHolidayGales();
+    void addNationalityHolidayMadagascar();
     void mostrarDatos();
 
     void setName(const string &name);

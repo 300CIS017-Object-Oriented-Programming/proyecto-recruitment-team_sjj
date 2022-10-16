@@ -25,7 +25,7 @@ public:
     virtual ~Sistema();
     void agrgarCandidato();
     void InfoNacionalidadGales();
-
+    void InfoNacionalidadMadagascar();
 };
 
 
