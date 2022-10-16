@@ -14,7 +14,7 @@ Nationality::Nationality() {
     distanceLevel = "";
 }
 
-void Nationality::addNationalityHoliday() {
+void Nationality::addNationalityHolidayGales() {
     string name = "Day of San Dwynwen";
     string description = "Maybe it's the lofty mountain views that do it, but they're a romantic bunch here!"
                          "They even have our own patron saint of lovers. Forget Valentine's Day,"

@@ -24,6 +24,7 @@ private:
     string eyeContact;
     string touch;
     string distanceLevel;
+    void inicializarDatos();
     //comunication style;
     vector<NationalHolidays*> natHd;
 
@@ -31,7 +32,8 @@ public:
     Nationality();
     ~Nationality();
 
-    void addNationalityHoliday();
+    void addNationalityHolidayGales();
+    void mostrarDatos();
 
     void setName(const string &name);
     void setDemonym(const string &demonym);
