@@ -7,6 +7,12 @@
 
 
 class Sistema {
+private:
+
+public:
+    Sistema();
+    ~Sistema();
+    void agrgarCandidato();
 
 };
 
