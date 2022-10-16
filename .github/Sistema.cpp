@@ -20,3 +20,20 @@ void Sistema::InfoNacionalidadGales() {
     Nationality * NationalityGales = new Nationality(name, demonym, typeExpressive, eyeContact, touch, distanceLevel);
     Nals.push_back(NationalityGales);
 }
+
+void Sistema::InfoNacionalidadMadagascar() {
+    string name = "Madagascar";
+    string demonym = "Malgache";
+    string eyeContact = "His communication style is direct and eye contact is limited.\n"
+                        "Prolonging it is considered disrespectful";
+    string touch = "the greeting between men, between women and between both,\n"
+                   "consists of shaking the right hand, while the right hand\n"
+                   "The left hand holds the right arm of its counterpart below the\n"
+                   "elbow";
+    string distanceLevel = "There is physical contact when talking and personal space is reduced,\n"
+                           "even between women and men";
+    bool typeExpressive = true;
+
+    Nationality * NationalityMadagascar = new Nationality(name, demonym, typeExpressive, eyeContact, touch, distanceLevel);
+    Nals.push_back(NationalityMadagascar);
+}
