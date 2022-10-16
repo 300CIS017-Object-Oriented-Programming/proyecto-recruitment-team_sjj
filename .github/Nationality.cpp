@@ -15,13 +15,12 @@ Nationality::Nationality() {
 }
 
 void Nationality::mostrarDatos(){
-    cout << "His name is: " << name << "\n";
-    cout << "His demonym is: " << demonym << "\n";
-    cout << "His type expressive is: " << typeExpressive << "\n";
-    cout << "His eye contact is: " << eyeContact << "\n";
-    cout << "His touch is: " << touch << "\n";
-    cout << "His distance level is: "<< distanceLevel << "\n";
-    cout << "\n";
+    cout << "The country name is: " << name << endl;
+    cout << "The country demonym is: " << demonym << endl;
+    cout << "the country type expression is: " << typeExpressive << endl;
+    cout << "The way the country permit eye contact is: " << eyeContact << endl;
+    cout << "They way they interact is: " << touch << endl;
+    cout << "The distance level permit by them is: "<< distanceLevel << endl;
 }
 
 void Nationality::addNationalityHolidayGales() {
