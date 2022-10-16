@@ -5,7 +5,7 @@
 #include <string>
 #include "Nationality.h"
 
-Nacionality::Nacionality() {
+Nationality::Nationality() {
     name = "";
     demonym = "";
     typeExpressive = false;
@@ -14,50 +14,61 @@ Nacionality::Nacionality() {
     distanceLevel = "";
 }
 
-void Nacionality::setName(const string &name) {
-    Nacionality::name = name;
+void Nationality::addNationalityHoliday() {
+    string name = "Day of San Dwynwen";
+    string description = "Maybe it's the lofty mountain views that do it, but they're a romantic bunch here!"
+                         "They even have our own patron saint of lovers. Forget Valentine's Day,"
+                         "January 25 is the most romantic day of the year in Wales. They give romantic gifts"
+                         "to loved ones to remind them that St Dwynwen was a girl who became a nun after her father"
+                         "forbade her to marry the man she loved.";
+    NationalHolidays * NationalityHolidayGales = new NationalHolidays(name, description);
+    natHd.push_back(NationalityHolidayGales);
 }
 
-const string &Nacionality::getName() const {
+void Nationality::setName(const string &name) {
+    Nationality::name = name;
+}
+
+const string &Nationality::getName() const {
     return name;
 }
 
-void Nacionality::setDemonym(const string &demonym) {
-    Nacionality::demonym = demonym;
+void Nationality::setDemonym(const string &demonym) {
+    Nationality::demonym = demonym;
 }
 
-const string &Nacionality::getDemonym() const {
+const string &Nationality::getDemonym() const {
     return demonym;
 }
 
-bool Nacionality::isTypeExpressive() const {
+bool Nationality::isTypeExpressive() const {
     return typeExpressive;
 }
 
-void Nacionality::setTypeExpressive(bool typeExpressive) {
-    Nacionality::typeExpressive = typeExpressive;
+void Nationality::setTypeExpressive(bool typeExpressive) {
+    Nationality::typeExpressive = typeExpressive;
 }
 
-void Nacionality::setEyeContact(const string &eyeContact) {
-    Nacionality::eyeContact = eyeContact;
+void Nationality::setEyeContact(const string &eyeContact) {
+    Nationality::eyeContact = eyeContact;
 }
 
-const string &Nacionality::getEyeContact() const {
+const string &Nationality::getEyeContact() const {
     return eyeContact;
 }
 
-void Nacionality::setTouch(const string &touch) {
-    Nacionality::touch = touch;
+void Nationality::setTouch(const string &touch) {
+    Nationality::touch = touch;
 }
 
-const string &Nacionality::getTouch() const {
+const string &Nationality::getTouch() const {
     return touch;
 }
 
-void Nacionality::setDistanceLevel(const string &distanceLevel) {
-    Nacionality::distanceLevel = distanceLevel;
+void Nationality::setDistanceLevel(const string &distanceLevel) {
+    Nationality::distanceLevel = distanceLevel;
 }
 
-const string &Nacionality::getDistanceLevel() const {
+const string &Nationality::getDistanceLevel() const {
     return distanceLevel;
 }

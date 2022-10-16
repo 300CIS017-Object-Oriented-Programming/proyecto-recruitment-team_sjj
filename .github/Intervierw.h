@@ -5,10 +5,15 @@
 #ifndef PROYECTO_RECRUITMENT_TEAM_SJJ_INTERVIERW_H
 #define PROYECTO_RECRUITMENT_TEAM_SJJ_INTERVIERW_H
 
-using std::cin;
-using std::cout;
+#include <iostream>
+#include <vector>
+#include "Candidato.h"
+
 using std::string;
 using std::vector;
+using std::endl;
+using std::cin;
+using std::cout;
 
 class Intervierw {
 private:

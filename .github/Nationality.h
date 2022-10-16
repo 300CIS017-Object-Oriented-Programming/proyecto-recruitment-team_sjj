@@ -6,13 +6,16 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include "NationalHolidays.h"
 
+using std::string;
 using std::vector;
 using std::endl;
 using std::cin;
 using std::cout;
 
-class Nacionality {
+class Nationality {
 
 private:
     string name;
@@ -22,11 +25,13 @@ private:
     string touch;
     string distanceLevel;
     //comunication style;
-    //vector<NationalHolidays*> natHd;
+    vector<NationalHolidays*> natHd;
 
 public:
-    Nacionality();
-    ~Nacionality();
+    Nationality();
+    ~Nationality();
+
+    void addNationalityHoliday();
 
     void setName(const string &name);
     void setDemonym(const string &demonym);
@@ -42,7 +47,7 @@ public:
     const string &getTouch() const;
     const string &getDistanceLevel() const;
 
-    Nacionality(string name, string demonym, bool typeExpressive, string eyeContact, sring touch, string distanceLevel);
+    Nationality(string name, string demonym, bool typeExpressive, string eyeContact, string touch, string distanceLevel);
 
 };
 

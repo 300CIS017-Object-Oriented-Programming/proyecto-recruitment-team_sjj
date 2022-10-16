@@ -32,15 +32,15 @@ void Candidato::mostrarDatos() {
 }
 
 
-string Candidato::getName() const {
+const string &Candidato::getName() const {
     return name;
 }
 
-void Candidato::setName(string name) {
+void Candidato::setName(const string &name) {
     Candidato::name = name;
 }
 
-int Candidato::getAge() const{
+int &Candidato::getAge() {
     return age;
 }
 
@@ -48,31 +48,31 @@ void Candidato::setAge(int age) {
     Candidato::age = age;
 }
 
-string Candidato::getCorreo() const {
+const string &Candidato::getCorreo() const {
     return correo;
 }
 
-void Candidato::setCorreo(string correo) {
+void Candidato::setCorreo(const string &correo) {
     Candidato::correo = correo;
 }
 
-string Candidato::getUrlLinkedIn() const {
+const string &Candidato::getUrlLinkedIn() const {
     return urlLinkedIn;
 }
 
-void Candidato::setUrlLinkedIn(string urlLinkedIn) {
+void Candidato::setUrlLinkedIn(const string &urlLinkedIn) {
     Candidato::urlLinkedIn = urlLinkedIn;
 }
 
-string Candidato::getUrlGitHub() const {
+const string &Candidato::getUrlGitHub() const {
     return urlGitHub;
 }
 
-void Candidato::setUrlGitHub(string urlGithub) {
+void Candidato::setUrlGitHub(const string &urlGithub) {
     Candidato::urlGitHub = urlGitHub;
 }
 
-int Candidato::getNumPassport() const{
+int &Candidato::getNumPassport(){
     return numPassport;
 }
 
