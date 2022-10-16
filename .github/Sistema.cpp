@@ -3,7 +3,11 @@
 //
 
 #include "Sistema.h"
+#include <fstream>
+#include <stdlib.h>
 #include <iostream>
+
+using namespace std;
 
 void Sistema::agrgarCandidato() {
     string name;
@@ -16,12 +20,16 @@ void Sistema::agrgarCandidato() {
     int nationality;
     string resum;
 
-    cout << "Digite su nombre: " << endl; cin >> name;
-    cout << "Digite su edad: " << endl; cin >> age;
-    cout << "Digite su correo: " << endl; cin >> correo;
-    cout << "Digite su urlLinkedIn: " << endl; cin >> urlLinkedIn;
-    cout << "Digite su urlGithub: " << endl; cin >> urlGitHub;
-    cout << "Digite si usted es de 1. Gales\t2. Madagascar\t3. dow" << endl; cin >> nationality;
+    fflush(stdin); cout << "Enter your name: " << endl; getline(cin,name);
+    cout << "Enter your age: " << endl; cin >> age;
+    fflush(stdin); cout << "Enter your email: " << endl; getline(cin, correo);
+    fflush(stdin); cout << "Enter your urlLinkedIn: " << endl; getline(cin, urlLinkedIn);
+    fflush(stdin); cout << "Enter your urlGithub: " << endl; getline(cin, urlGitHub);
+    cout << "Enter your passport number: " << endl; cin >> numPassport;
+    cout << "Choose if you are from 1. Gales\t2. Madagascar\t3. dow" << endl; cin >> nationality;
+
+    Candidato * candidateProfile = new Candidato(name, age, urlLinkedIn, urlGitHub, numPassport, nationality);
+    candidate.push_back(candidateProfile);
 
     if (nationality = 1){
         for (int i = 0; i < Nals.size(); i++){
@@ -74,4 +82,33 @@ void Sistema::InfoNacionalidadMadagascar() {
 
     Nationality * NationalityMadagascar = new Nationality(name, demonym, typeExpressive, eyeContact, touch, distanceLevel);
     Nals.push_back(NationalityMadagascar);
+}
+
+void Sistema::interviewGuide() {
+        string name;
+        ofstream archivo;
+        string nombreArchivo,frase;
+        char rpt;
+
+        cout<<"Digite el nombre del archivo: ";
+        getline(cin,nombreArchivo);
+
+        archivo.open(nombreArchivo.c_str(),ios::out); //Creamos el archivo
+
+        if (archivo.fail()) { //Si a ocurrido algun error
+            cout<<"No se pudo abrir el archivo";
+            exit(1);
+        }
+
+        else {
+            for (int i = 0; i < candidate.size(); i++){
+                if (candidate[i]->getName() == name){
+
+                }
+                archivo << "The candidate's name is: " <<
+            }
+        }
+
+        archivo.close(); //Cerramos el archivo
+
 }

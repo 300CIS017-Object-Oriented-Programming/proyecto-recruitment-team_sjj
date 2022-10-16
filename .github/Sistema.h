@@ -6,6 +6,7 @@
 #define PROYECTO_RECRUITMENT_TEAM_SJJ_SISTEMA_H
 
 #include "Nationality.h"
+#include "Candidato.h"
 #include <iostream>
 #include <vector>
 
@@ -18,6 +19,7 @@ using std::cin;
 class Sistema {
 private:
     vector<Nationality*> Nals;
+    vector<Candidato*> candidate;
     void initializarDatos();
 
 public:
@@ -26,6 +28,8 @@ public:
     void agrgarCandidato();
     void InfoNacionalidadGales();
     void InfoNacionalidadMadagascar();
+
+    void interviewGuide();
 };
 
 
