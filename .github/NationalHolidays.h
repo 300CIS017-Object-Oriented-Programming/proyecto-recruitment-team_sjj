@@ -23,8 +23,8 @@ private:
     void inicializarDatos();
 
 public:
-    NationalHolidays();
-    ~NationalHolidays();
+    NationalHolidays();//Constructor
+    ~NationalHolidays();//Destructor
 
     void mostrarDatos();
 

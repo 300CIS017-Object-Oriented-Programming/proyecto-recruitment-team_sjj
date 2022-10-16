@@ -13,7 +13,7 @@ Nationality::Nationality() {
     touch = "";
     distanceLevel = "";
 }
-
+//Función que ayuda a guardar los datos ingresados por el usuario.
 void Nationality::mostrarDatos(){
     cout << "The country name is: " << name << endl;
     cout << "The country demonym is: " << demonym << endl;
@@ -22,7 +22,7 @@ void Nationality::mostrarDatos(){
     cout << "They way they interact is: " << touch << endl;
     cout << "The distance level permit by them is: "<< distanceLevel << endl;
 }
-
+//Funciones donde se guardan los dias especiales de cada pais seleccionado por los miembros del equipo.
 void Nationality::addNationalityHolidayGales() {
     string name = "Day of San Dwynwen";
     string description = "Maybe it's the lofty mountain views that do it, but they're a romantic bunch here!"

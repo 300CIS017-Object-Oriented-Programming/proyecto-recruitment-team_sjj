@@ -21,6 +21,7 @@ void menuReclutador(){
 //comprobar el conflicto
 void menu(Sistema & sistema){
     int opt;
+    int opc;
     do{
         menuReclutador();
         cin >> opt;
@@ -29,9 +30,11 @@ void menu(Sistema & sistema){
             case 0:
                 break;
             case 1:
-                cout<<"desea agregar un nuevo usuario 1.si/2.no?"<<endl; cin>>opc;
+                cout<<"Do you want to add a new candidate? 1.Yes/2.no?"<<endl; cin>>opc;
                 if(opc=1) {
                     sistema.agrgarCandidato();
+                }else{
+                    break;
                 }
                 break;
             case 2:

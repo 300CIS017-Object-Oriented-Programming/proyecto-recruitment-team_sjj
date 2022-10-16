@@ -27,8 +27,8 @@ private:
     string resum;
     void inicializarDatos();
 public:
-    Candidato(); //constructor
-    ~Candidato(); //destructor
+    Candidato(); //Constructor
+    ~Candidato(); //Destructor
 
     const string &getName() const;
     int &getAge();

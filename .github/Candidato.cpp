@@ -6,7 +6,6 @@
 #include <iostream>
 
 Candidato::Candidato() {
-
     name = "";
     age = 0;
     correo = "";
@@ -18,17 +17,17 @@ Candidato::Candidato() {
     resum = "";
     inicializarDatos();
 }
-
+//Función que ayuda a guardar los datos ingresados por el usuario.
 void Candidato::mostrarDatos() {
-    cout << "El nombre es: " << name << "\n";
-    cout << "la edad es: " << age << "\n";
-    cout << "El correo es: " << correo << "\n";
-    cout << "la url de LinkedIn es: " << urlLinkedIn << "\n";
-    cout << "la url de GitHub es: " << urlGitHub << "\n";
-    cout << "el numero del pasaporte es: " << numPassport << "\n";
-    cout << "Su posicion es: " << position << "\n";
-    cout << "su nacionalidad es:  " << nationality << "\n";
-    cout << "resumen:  " << resum << "\n";
+    cout << "The name is: " << name << "\n";
+    cout << "The age is: " << age << "\n";
+    cout << "The mail is: " << correo << "\n";
+    cout << "LinkedIn url is: " << urlLinkedIn << "\n";
+    cout <<  "The GitHub url is:" << urlGitHub << "\n";
+    cout << "the passport number is: " << numPassport << "\n";
+    cout << "Your position is: " << position << "\n";
+    cout << "his nationality is: " << nationality << "\n";
+    cout << "abstract: " << resum << "\n";
     cout << "\n";
 }
 

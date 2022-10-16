@@ -8,7 +8,7 @@
 #include <iostream>
 
 using namespace std;
-
+//Función donde los reclutadores podrán utilizarla para crear candidatos con todos los atributos deseados y gurdarlos.
 void Sistema::agrgarCandidato() {
     string name;
     int age;
@@ -20,6 +20,7 @@ void Sistema::agrgarCandidato() {
     int nationality;
     string resum;
 
+    //Pedimos los datos del candidato y los metemos en un vector para poder acceder más fácil a ellos.
     fflush(stdin); cout << "Enter your name: " << endl; getline(cin,name);
     cout << "Enter your age: " << endl; cin >> age;
     fflush(stdin); cout << "Enter your email: " << endl; getline(cin, correo);
@@ -31,6 +32,8 @@ void Sistema::agrgarCandidato() {
     Candidato * candidateProfile = new Candidato(name, age, urlLinkedIn, urlGitHub, numPassport, nationality);
     candidate.push_back(candidateProfile);
 
+    /*Recorremos el vector para poder acceder a la información en la posición en la que la está guardando dependiendo del nuemro que
+    digite el usuario.*/
     if (nationality = 1){
         for (int i = 0; i < Nals.size(); i++){
             if(Nals[i]->getName() == "Gales"){
@@ -55,7 +58,8 @@ void Sistema::agrgarCandidato() {
 
 }
 
-
+/* Estas funciones se implementa para poder guardar la información de cada pais elegido por los miembros del equipo.
+ Para poder guradar toda la informacion se crea un vector.*/
 void Sistema::InfoNacionalidadGales() {
     string name = "Gales";
     string demonym = "Galés";
@@ -85,6 +89,7 @@ void Sistema::InfoNacionalidadMadagascar() {
     Nals.push_back(NationalityMadagascar);
 }
 
+//Esta función nos ayuda a crear un archivo donde se guardaran todos los datos del candidato y el estado de la entrevista.
 void Sistema::interviewGuide() {
         string name;
         ofstream archivo;
@@ -103,7 +108,7 @@ void Sistema::interviewGuide() {
 
         else {
             for (int i = 0; i < candidate.size(); i++){
-                if (candidate[i]->getName() == name){
+                if (candidate[i]->getName() == name) {
 
                 }
                 archivo << "The candidate's name is: " <<

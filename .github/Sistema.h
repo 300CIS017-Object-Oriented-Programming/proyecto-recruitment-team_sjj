@@ -23,8 +23,8 @@ private:
     void initializarDatos();
 
 public:
-    Sistema();
-    virtual ~Sistema();
+    Sistema(); //Constructor
+    virtual ~Sistema();//Destructor
     void agrgarCandidato();
     void InfoNacionalidadGales();
     void InfoNacionalidadMadagascar();

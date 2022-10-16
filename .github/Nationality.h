@@ -29,8 +29,8 @@ private:
     vector<NationalHolidays*> natHd;
 
 public:
-    Nationality();
-    ~Nationality();
+    Nationality();//Constructor
+    ~Nationality();//Destructor
 
     void addNationalityHolidayGales();
     void addNationalityHolidayMadagascar();
