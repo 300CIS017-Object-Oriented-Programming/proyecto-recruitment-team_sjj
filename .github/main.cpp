@@ -18,11 +18,11 @@ void menuReclutador(){
     cout << "Opción: ";
     cout << "-1. salir\n";
 }
-
+//comprobar el conflicto
 void rmenu(Sistema & sistema){
     int opt;
     do{
-        printMenuReclutador();
+        menuReclutador();
         cin >> opt;
         switch(opt)
         {
