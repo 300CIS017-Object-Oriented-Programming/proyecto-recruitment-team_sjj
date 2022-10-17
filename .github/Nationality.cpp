@@ -35,12 +35,22 @@ void Nationality::addNationalityHolidayGales() {
 }
 
 void Nationality::addNationalityHolidayMadagascar() {
-    string name = "christmas or krsmasy";
+    string name = "Christmas or krsmasy";
     string description = "In December the locals celebrate Christmas or Krsmasy in style. Christmas is for local "
                          "residents one of their most important holidays, on that day they sing hymns and organize "
                          "performances and concerts.";
     auto * NationalityHolidayMad = new NationalHolidays(name, description);
     natHd.push_back(NationalityHolidayMad);
+}
+
+void Nationality::addNationalityHolidayLebanon() {
+    string name = "Orthodox Easter";
+    string description = "Easter is the principal festival of Greece and the Orthodox Church. "
+                         "In the bible, it is the day when Mary Magdalene found that an empty tomb in the cave in "
+                         "It signifies the end of the 40 days of Lent, meaning Christians who gave up something "
+                         "during lent to signify Jesus' time in the wilderness, can indulge themselves again."
+    auto * NationalityHolidayLebanon = new NationalHolidays(name, description);
+    natHd.push_back(NationalityHolidayLebanon);
 }
 
 void Nationality::setName(const string &name) {

@@ -55,4 +55,5 @@ public:
 
     void mostrarDatos();
 };
+
 #endif //PROYECTO_RECRUITMENT_TEAM_SJJ_CANDIDATO_H

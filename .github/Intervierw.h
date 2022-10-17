@@ -18,7 +18,7 @@ using std::cout;
 class Intervierw {
 private:
     vector<Candidato*> CandidateProfile;
-    vector<int>date;
+    vector<int> date;
     bool hired;
 public:
     Intervierw();

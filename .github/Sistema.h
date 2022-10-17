@@ -31,5 +31,4 @@ public:
     void interviewGuide();
 };
 
-
 #endif //PROYECTO_RECRUITMENT_TEAM_SJJ_SISTEMA_H
