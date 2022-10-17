@@ -30,7 +30,7 @@ void Nationality::addNationalityHolidayGales() {
                          "January 25 is the most romantic day of the year in Wales. They give romantic gifts"
                          "to loved ones to remind them that St Dwynwen was a girl who became a nun after her father"
                          "forbade her to marry the man she loved.";
-    NationalHolidays * NationalityHolidayGales = new NationalHolidays(name, description);
+    auto * NationalityHolidayGales = new NationalHolidays(name, description);
     natHd.push_back(NationalityHolidayGales);
 }
 
@@ -39,7 +39,7 @@ void Nationality::addNationalityHolidayMadagascar() {
     string description = "In December the locals celebrate Christmas or Krsmasy in style. Christmas is for local "
                          "residents one of their most important holidays, on that day they sing hymns and organize "
                          "performances and concerts.";
-    NationalHolidays * NationalityHolidayMad = new NationalHolidays(name, description);
+    auto * NationalityHolidayMad = new NationalHolidays(name, description);
     natHd.push_back(NationalityHolidayMad);
 }
 
@@ -89,4 +89,9 @@ void Nationality::setDistanceLevel(const string &distanceLevel) {
 
 const string &Nationality::getDistanceLevel() const {
     return distanceLevel;
+}
+
+Nationality::Nationality(string name, string demonym, bool typeExpressive, string eyeContact,
+                         string touch, string distanceLevel) : name(name), demonym(demonym), typeExpressive(typeExpressive), eyeContact(eyeContact), touch(touch), distanceLevel(distanceLevel){
+
 }

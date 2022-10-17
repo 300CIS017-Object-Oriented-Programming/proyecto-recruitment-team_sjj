@@ -6,6 +6,7 @@
 #define PROYECTO_RECRUITMENT_TEAM_SJJ_CANDIDATO_H
 
 #include <iostream>
+#include <string>
 #include <vector>
 
 using std::string;

@@ -15,7 +15,7 @@ Candidato::Candidato() {
     position = "";
     nationality = 0;
     resum = "";
-    inicializarDatos();
+    //inicializarDatos();
 }
 //Función que ayuda a guardar los datos ingresados por el usuario.
 void Candidato::mostrarDatos() {
@@ -78,6 +78,11 @@ int &Candidato::getNumPassport(){
 
 void Candidato::setNumPassport(int numPassport) {
     Candidato::numPassport = numPassport;
+}
+
+Candidato::Candidato(string name, int age, string urlLinkedIn, string urlGitHub, int numPassport,
+                     int nationality) : name(name), age(age), urlLinkedIn(urlLinkedIn), urlGitHub(urlGitHub), numPassport(numPassport), nationality(nationality) {
+
 }
 
 

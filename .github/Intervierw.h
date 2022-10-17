@@ -24,7 +24,7 @@ public:
     Intervierw();
     ~Intervierw();
 
-    bool &getHired() const;
+    bool getHired() const;
     void setHired(bool hired);
 
     void mostrarDatos();

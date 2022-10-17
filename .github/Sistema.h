@@ -26,8 +26,7 @@ public:
     Sistema(); //Constructor
     virtual ~Sistema();//Destructor
     void agrgarCandidato();
-    void InfoNacionalidadGales();
-    void InfoNacionalidadMadagascar();
+    void InfoNacionalidad();
 
     void interviewGuide();
 };

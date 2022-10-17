@@ -3,11 +3,12 @@
 //
 
 #include "NationalHolidays.h"
+#include <iostream>
 
 NationalHolidays::NationalHolidays() {
     name = "";
     description = "";
-    inicializarDatos();
+    //inicializarDatos();
 }
 
 void NationalHolidays::setName(const string &name) {
@@ -24,4 +25,8 @@ void NationalHolidays::setDescription(const string &description) {
 
 const string &NationalHolidays::getDescription() const {
     return description;
+}
+
+NationalHolidays::NationalHolidays(string name, string description) : name(name), description(description) {
+
 }

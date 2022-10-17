@@ -19,6 +19,7 @@ void Sistema::agrgarCandidato() {
     string position;
     int nationality;
     string resum;
+    Candidato * candidateProfile;
 
     //Pedimos los datos del candidato y los metemos en un vector para poder acceder más fácil a ellos.
     fflush(stdin); cout << "Enter your name: " << endl; getline(cin,name);
@@ -29,7 +30,7 @@ void Sistema::agrgarCandidato() {
     cout << "Enter your passport number: " << endl; cin >> numPassport;
     cout << "Choose if you are from 1. Gales\t2. Madagascar\t3. dow" << endl; cin >> nationality;
 
-    Candidato * candidateProfile = new Candidato(name, age, urlLinkedIn, urlGitHub, numPassport, nationality);
+    candidateProfile = new Candidato(name, age, urlLinkedIn, urlGitHub, numPassport, nationality);
     candidate.push_back(candidateProfile);
 
     /*Recorremos el vector para poder acceder a la información en la posición en la que la está guardando dependiendo del nuemro que
@@ -60,7 +61,7 @@ void Sistema::agrgarCandidato() {
 
 /* Estas funciones se implementa para poder guardar la información de cada pais elegido por los miembros del equipo.
  Para poder guradar toda la informacion se crea un vector.*/
-void Sistema::InfoNacionalidadGales() {
+void Sistema::InfoNacionalidad() {
     string name = "Gales";
     string demonym = "Galés";
     string eyeContact = "They maintains a good eye contact at the star and ending of the meeting";
@@ -68,28 +69,27 @@ void Sistema::InfoNacionalidadGales() {
     string distanceLevel = "They usually maintanis certenly distance between people they meet recently";
     bool typeExpressive = true;
 
-    Nationality * NationalityGales = new Nationality(name, demonym, typeExpressive, eyeContact, touch, distanceLevel);
+    auto * NationalityGales = new Nationality(name, demonym, typeExpressive, eyeContact, touch, distanceLevel);
     Nals.push_back(NationalityGales);
-}
 
-void Sistema::InfoNacionalidadMadagascar() {
-    string name = "Madagascar";
-    string demonym = "Malgache";
-    string eyeContact = "His communication style is direct and eye contact is limited.\n"
+    string name2 = "Madagascar";
+    string demonym2 = "Malgache";
+    string eyeContact2 = "His communication style is direct and eye contact is limited.\n"
                         "Prolonging it is considered disrespectful";
-    string touch = "the greeting between men, between women and between both,\n"
+    string touch2 = "the greeting between men, between women and between both,\n"
                    "consists of shaking the right hand, while the right hand\n"
                    "The left hand holds the right arm of its counterpart below the\n"
                    "elbow";
-    string distanceLevel = "There is physical contact when talking and personal space is reduced,\n"
+    string distanceLevel2 = "There is physical contact when talking and personal space is reduced,\n"
                            "even between women and men";
-    bool typeExpressive = true;
+    bool typeExpressive2 = true;
 
-    Nationality * NationalityMadagascar = new Nationality(name, demonym, typeExpressive, eyeContact, touch, distanceLevel);
+    auto * NationalityMadagascar = new Nationality(name2, demonym2, typeExpressive2, eyeContact2, touch2, distanceLevel2);
     Nals.push_back(NationalityMadagascar);
 }
 
 //Esta función nos ayuda a crear un archivo donde se guardaran todos los datos del candidato y el estado de la entrevista.
+/*
 void Sistema::interviewGuide() {
         string name;
         ofstream archivo;
@@ -118,3 +118,4 @@ void Sistema::interviewGuide() {
         archivo.close(); //Cerramos el archivo
 
 }
+ */
