@@ -27,7 +27,7 @@ public:
     virtual ~Sistema();//Destructor
     void agrgarCandidato();
     void InfoNacionalidad();
-
+    void welcomeLetter();
     void interviewGuide();
 };
 

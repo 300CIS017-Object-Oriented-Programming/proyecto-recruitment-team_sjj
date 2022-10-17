@@ -119,3 +119,23 @@ void Sistema::interviewGuide() {
 
 }
  */
+void Sistema::welcomeLetter(){
+    int opc1;
+    ifstream archivo;
+    string texto;
+    cout<<"Does the user pass the tests? 1.Yes/2.No"<<endl; cin>>opc1;
+    if(opc1=1){
+        archivo.open("Welcome Letter.txt", ios::in);//se abre el archivo en modo lectura
+        if(archivo.fail()){
+            cout<<"could not open the file";
+            exit(1);
+        }
+        while(!archivo.eof()){//mientras no sea el final del archivo
+            getline(archivo,texto);
+            cout<<texto<<endl;
+        }
+        archivo.close();//se cierra el archivo
+    }else{
+        exit(1);
+    }
+}
