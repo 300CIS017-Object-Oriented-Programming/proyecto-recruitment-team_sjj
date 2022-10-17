@@ -48,3 +48,10 @@ void menu(Sistema & sistema){
         }
     } while( opt != -1);
 }
+
+int main(){
+    Sistema sistema;
+    menu( sistema );
+    return 0;
+}
+
