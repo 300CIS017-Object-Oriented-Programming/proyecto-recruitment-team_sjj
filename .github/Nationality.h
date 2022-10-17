@@ -34,6 +34,7 @@ public:
 
     void addNationalityHolidayGales();
     void addNationalityHolidayMadagascar();
+    void addNationalityHolidayLebanon();
     void mostrarDatos();
 
     void setName(const string &name);

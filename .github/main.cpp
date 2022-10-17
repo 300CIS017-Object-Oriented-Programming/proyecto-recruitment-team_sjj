@@ -13,14 +13,14 @@ void displayMenu(){
     cout << "Please, select an option:" << endl;
     cout << "   1. Create candidate" << endl;
     cout << "   2. Schedule interview" << endl;
-    cout << "   2. Judge candidates" << endl;
+    cout << "   3. Judge candidates" << endl;
     cout << "   4. Create approval letter" << endl;
     cout << "   0. Exit" << endl;
     cout << "Option: ";
 }
 
 void menu( Sistema & sistema ){
-    int opt1, opt2;
+    int opt, opc;
     do{
         displayMenu();
         cin >> opt;
@@ -53,7 +53,7 @@ void menu( Sistema & sistema ){
                 break;
             case 2:
                 do{
-                    cout << "Do you schedule an interview?" << endl;
+                    cout << "would you like to schedule an interview?" << endl;
                     cout << "  1. Yes" << endl;
                     cout << "  2. No" << endl;
                     cin >> opc;
@@ -85,7 +85,7 @@ void menu( Sistema & sistema ){
                         cout << "Please, select a valid option." << endl;
                 } while( opc != 1 and opc != 2);
                 if( opc == 1 )
-                    sistema.createAprovalLetter();
+                    sistema.welcomeLetter();
                 break;
             default:
                 cout << "Please select a valid option" << endl;

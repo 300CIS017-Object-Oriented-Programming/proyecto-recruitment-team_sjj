@@ -9,7 +9,7 @@
 
 using namespace std;
 //Función donde los reclutadores podrán utilizarla para crear candidatos con todos los atributos deseados y gurdarlos.
-void Sistema::agrgarCandidato() {
+void Sistema::agregarCandidato() {
     string name;
     int age;
     string correo;

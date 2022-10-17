@@ -25,7 +25,7 @@ private:
 public:
     Sistema(); //Constructor
     virtual ~Sistema();//Destructor
-    void agrgarCandidato();
+    void agregarCandidato();
     void InfoNacionalidad();
     void welcomeLetter();
     void interviewGuide();
