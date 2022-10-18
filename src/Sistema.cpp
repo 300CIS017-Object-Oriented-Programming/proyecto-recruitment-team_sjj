@@ -123,10 +123,6 @@ void Sistema::judgeInterview(){
 
 }
 
-void Sistema::interviewGuide(){
-
-}
-
 void Sistema::createAprovalLetter(){
     int opc1;
     ifstream archivo;
@@ -149,7 +145,7 @@ void Sistema::createAprovalLetter(){
 }
 
 //Esta función nos ayuda a crear un archivo donde se guardaran todos los datos del candidato y el estado de la entrevista.
-/*
+
 void Sistema::interviewGuide() {
         string name;
         ofstream archivo;
@@ -178,4 +174,3 @@ void Sistema::interviewGuide() {
         archivo.close(); //Cerramos el archivo
 
 }
- */

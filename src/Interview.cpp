@@ -16,3 +16,7 @@ bool Interview::getHired() const{
 void Interview::setHired(bool hired) {
     Interview::hired= hired;
 }
+
+Candidato *Interview::getCandidato() const{
+    return candidato;
+}

@@ -29,6 +29,8 @@ public:
     void setHired(bool hired);
 
     void mostrarDatos();
+
+    Candidato *getCandidato() const;
 };
 
 
