@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: Project
+# Project: RecruiterSoftware
 # Configurations: Debug
 # =============================================================================
 
@@ -41,44 +41,44 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/jfmun/github$ curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target Project_tst
+# Object build statements for EXECUTABLE target RecruiterSoftware_tst
 
 
 #############################################
-# Order-only phony target for Project_tst
+# Order-only phony target for RecruiterSoftware_tst
 
-build cmake_object_order_depends_target_Project_tst: phony || CMakeFiles/Project_tst.dir
+build cmake_object_order_depends_target_RecruiterSoftware_tst: phony || CMakeFiles/RecruiterSoftware_tst.dir
 
-build CMakeFiles/Project_tst.dir/SistemTest.obj: CXX_COMPILER__Project_tst_Debug C$:/Users/jfmun/github$ curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/SistemTest.cpp || cmake_object_order_depends_target_Project_tst
-  DEP_FILE = CMakeFiles\Project_tst.dir\SistemTest.obj.d
+build CMakeFiles/RecruiterSoftware_tst.dir/SistemTest.cpp.obj: CXX_COMPILER__RecruiterSoftware_tst_Debug C$:/Users/jfmun/github$ curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/SistemTest.cpp || cmake_object_order_depends_target_RecruiterSoftware_tst
+  DEP_FILE = CMakeFiles\RecruiterSoftware_tst.dir\SistemTest.cpp.obj.d
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles\Project_tst.dir
-  OBJECT_FILE_DIR = CMakeFiles\Project_tst.dir
+  OBJECT_DIR = CMakeFiles\RecruiterSoftware_tst.dir
+  OBJECT_FILE_DIR = CMakeFiles\RecruiterSoftware_tst.dir
 
-build CMakeFiles/Project_tst.dir/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.obj: CXX_COMPILER__Project_tst_Debug C$:/Users/jfmun/github$ curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp || cmake_object_order_depends_target_Project_tst
-  DEP_FILE = CMakeFiles\Project_tst.dir\CMakeFiles\3.23.2\CompilerIdCXX\CMakeCXXCompilerId.obj.d
+build CMakeFiles/RecruiterSoftware_tst.dir/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.obj: CXX_COMPILER__RecruiterSoftware_tst_Debug C$:/Users/jfmun/github$ curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp || cmake_object_order_depends_target_RecruiterSoftware_tst
+  DEP_FILE = CMakeFiles\RecruiterSoftware_tst.dir\CMakeFiles\3.23.2\CompilerIdCXX\CMakeCXXCompilerId.cpp.obj.d
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles\Project_tst.dir
-  OBJECT_FILE_DIR = CMakeFiles\Project_tst.dir\CMakeFiles\3.23.2\CompilerIdCXX
+  OBJECT_DIR = CMakeFiles\RecruiterSoftware_tst.dir
+  OBJECT_FILE_DIR = CMakeFiles\RecruiterSoftware_tst.dir\CMakeFiles\3.23.2\CompilerIdCXX
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Project_tst
+# Link build statements for EXECUTABLE target RecruiterSoftware_tst
 
 
 #############################################
-# Link the executable Project_tst.exe
+# Link the executable RecruiterSoftware_tst.exe
 
-build Project_tst.exe Project_tst[1]_tests.cmake | ${cmake_ninja_workdir}Project_tst[1]_tests.cmake: CXX_EXECUTABLE_LINKER__Project_tst_Debug CMakeFiles/Project_tst.dir/SistemTest.obj CMakeFiles/Project_tst.dir/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.obj
+build RecruiterSoftware_tst.exe RecruiterSoftware_tst[1]_tests.cmake | ${cmake_ninja_workdir}RecruiterSoftware_tst[1]_tests.cmake: CXX_EXECUTABLE_LINKER__RecruiterSoftware_tst_Debug CMakeFiles/RecruiterSoftware_tst.dir/SistemTest.cpp.obj CMakeFiles/RecruiterSoftware_tst.dir/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.obj
   FLAGS = -g
-  LINK_LIBRARIES = -lProject_lib  -lgtest  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Project_tst.dir
-  POST_BUILD = cmd.exe /C "cd /D "C:\Users\jfmun\github curso\recruiterSoftware\proyecto-recruitment-team_sjj\tst\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2022.2\bin\cmake\win\bin\cmake.exe" -D TEST_TARGET=Project_tst -D "TEST_EXECUTABLE=C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug/Project_tst.exe" -D TEST_EXECUTOR= -D "TEST_WORKING_DIR=C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug" -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=Project_tst_TESTS -D "CTEST_FILE=C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug/Project_tst[1]_tests.cmake" -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/JetBrains/CLion 2022.2/bin/cmake/win/share/cmake-3.23/Modules/GoogleTestAddTests.cmake""
+  LINK_LIBRARIES = -lRecruiterSoftware_lib  -lgtest  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\RecruiterSoftware_tst.dir
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\jfmun\github curso\recruiterSoftware\proyecto-recruitment-team_sjj\tst\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2022.2\bin\cmake\win\bin\cmake.exe" -D TEST_TARGET=RecruiterSoftware_tst -D "TEST_EXECUTABLE=C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug/RecruiterSoftware_tst.exe" -D TEST_EXECUTOR= -D "TEST_WORKING_DIR=C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug" -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=RecruiterSoftware_tst_TESTS -D "CTEST_FILE=C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug/RecruiterSoftware_tst[1]_tests.cmake" -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/JetBrains/CLion 2022.2/bin/cmake/win/share/cmake-3.23/Modules/GoogleTestAddTests.cmake""
   PRE_LINK = cd .
   RESTAT = 1
-  TARGET_FILE = Project_tst.exe
-  TARGET_IMPLIB = libProject_tst.dll.a
-  TARGET_PDB = Project_tst.exe.dbg
+  TARGET_FILE = RecruiterSoftware_tst.exe
+  TARGET_IMPLIB = libRecruiterSoftware_tst.dll.a
+  TARGET_PDB = RecruiterSoftware_tst.exe.dbg
 
 
 #############################################
@@ -118,7 +118,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build Project_tst: phony Project_tst.exe
+build RecruiterSoftware_tst: phony RecruiterSoftware_tst.exe
 
 # =============================================================================
 # Folder targets.
@@ -128,12 +128,7 @@ build Project_tst: phony Project_tst.exe
 #############################################
 # Folder: C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug
 
-build all: phony Project_tst.exe
-
-# =============================================================================
-# Unknown Build Time Dependencies.
-# Tell Ninja that they may appear as side effects of build rules
-# otherwise ordered by order-only dependencies.
+build all: phony RecruiterSoftware_tst.exe
 
 # =============================================================================
 # Built-in targets

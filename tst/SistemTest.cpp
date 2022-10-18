@@ -5,6 +5,6 @@
 #include "../src/Sistema.cpp"
 
 
-TEST(){
+TEST(Sistema, ){
 
 }

@@ -155,7 +155,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Project
+CMAKE_PROJECT_NAME:STATIC=RecruiterSoftware
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/MinGW/bin/ranlib.exe
@@ -251,6 +251,15 @@ Project_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst
+
+//Value Computed by CMake
+RecruiterSoftware_BINARY_DIR:STATIC=C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug
+
+//Value Computed by CMake
+RecruiterSoftware_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+RecruiterSoftware_SOURCE_DIR:STATIC=C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst
 
 
 ########################

@@ -1,4 +1,4 @@
-C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug/CMakeFiles/Project_tst.dir
+C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug/CMakeFiles/RecruiterSoftware_tst.dir
 C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug/CMakeFiles/test.dir
 C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug/CMakeFiles/rebuild_cache.dir

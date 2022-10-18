@@ -1,0 +1,17 @@
+# ninja log v5
+37	438	6877613107809159	src/CMakeFiles/RecruiterSoftware_run.dir/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.obj	d82b11460aeff9
+138	460	6877613108054188	src/CMakeFiles/RecruiterSoftware_lib.dir/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.obj	c64b7d3d60a2b1e0
+3	1171	6877613115100431	src/CMakeFiles/RecruiterSoftware_run.dir/NationalHolidays.cpp.obj	df459ce77e423d9
+68	1217	6877613115615526	src/CMakeFiles/RecruiterSoftware_lib.dir/Intervierw.cpp.obj	46c74af51d5a41d6
+18	1226	6877613115640522	src/CMakeFiles/RecruiterSoftware_run.dir/Intervierw.cpp.obj	8938a4d26202c885
+88	1237	6877613115690522	src/CMakeFiles/RecruiterSoftware_lib.dir/Candidato.cpp.obj	2ced928ec9570ed7
+11	1246	6877613115790532	src/CMakeFiles/RecruiterSoftware_run.dir/Candidato.cpp.obj	5b83037963bb0714
+78	1258	6877613115940577	src/CMakeFiles/RecruiterSoftware_lib.dir/NationalHolidays.cpp.obj	656d208c9d111046
+59	1428	6877613117560855	src/CMakeFiles/RecruiterSoftware_run.dir/main.cpp.obj	d78c53b1593a792a
+100	1453	6877613117965944	src/CMakeFiles/RecruiterSoftware_lib.dir/main.cpp.obj	41f1e23d92ed763d
+25	1468	6877613118065955	src/CMakeFiles/RecruiterSoftware_run.dir/Nationality.cpp.obj	ed2e8e5921eaee38
+1218	1490	6877613118355981	tst/CMakeFiles/RecruiterSoftware_tst.dir/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.obj	1a38efcadddb4256
+49	1659	6877613120039016	src/CMakeFiles/RecruiterSoftware_run.dir/Sistema.cpp.obj	9164efd84400a32e
+461	1734	6877613120786414	src/CMakeFiles/RecruiterSoftware_lib.dir/Nationality.cpp.obj	67514212e02c229c
+440	1916	6877613122611988	src/CMakeFiles/RecruiterSoftware_lib.dir/Sistema.cpp.obj	610feb48aa6964de
+1916	2378	6877613127242561	src/libRecruiterSoftware_lib.a	e6181f72bf0af929
