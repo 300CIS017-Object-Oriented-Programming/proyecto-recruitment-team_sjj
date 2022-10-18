@@ -17,8 +17,7 @@ void displayMenu(){
     cout << "Please, select an option:" << endl;
     cout << "   1. Create candidate" << endl;
     cout << "   2. Schedule interview" << endl;
-    cout << "   3. Judge candidates" << endl;
-    cout << "   4. Create approval letter" << endl;
+    cout << "   3. Create approval letter" << endl;
     cout << "   0. Exit" << endl;
     cout << "Option: ";
 }
@@ -67,12 +66,6 @@ void menu(Sistema &sistema){
                     sistema.scheduleInterview();
                 break;
             case 3:
-                action = "to judge an interview";
-                opt2 = inputValidation(action);
-                if(opt2 == 1)
-                    sistema.judgeInterview();
-                break;
-            case 4:
                 action = "to create an approval letter?";
                 opt2 = inputValidation(action);
                 if(opt2 == 1)
