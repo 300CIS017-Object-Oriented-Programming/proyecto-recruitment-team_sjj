@@ -17,6 +17,7 @@ using std::cout;
 
 class Candidato {
 private:
+    int num;
     string name;
     int age;
     string correo;

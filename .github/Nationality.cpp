@@ -48,7 +48,7 @@ void Nationality::addNationalityHolidayLebanon() {
     string description = "Easter is the principal festival of Greece and the Orthodox Church. "
                          "In the bible, it is the day when Mary Magdalene found that an empty tomb in the cave in "
                          "It signifies the end of the 40 days of Lent, meaning Christians who gave up something "
-                         "during lent to signify Jesus' time in the wilderness, can indulge themselves again."
+                         "during lent to signify Jesus' time in the wilderness, can indulge themselves again.";
     auto * NationalityHolidayLebanon = new NationalHolidays(name, description);
     natHd.push_back(NationalityHolidayLebanon);
 }

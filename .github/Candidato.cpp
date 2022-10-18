@@ -6,6 +6,7 @@
 #include <iostream>
 
 Candidato::Candidato() {
+    num = 0;
     name = "";
     age = 0;
     correo = "";
