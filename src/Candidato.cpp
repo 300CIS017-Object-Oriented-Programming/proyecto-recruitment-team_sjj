@@ -85,11 +85,11 @@ Candidato::Candidato(string name, int age, string urlLinkedIn, string urlGitHub,
 
 }
 
-Candidato *Candidato::getNationality() const {
+Nationality *Candidato::getNationality() const {
     return nationality;
 }
 
-void Candidato::setNationality(Candidato *nacionality) {
+void Candidato::setNationality(Nationality *nacionality) {
     Candidato::nationality = nacionality;
 }
 

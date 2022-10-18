@@ -135,7 +135,7 @@ void Sistema::scheduleInterview(){
             }
     }
     for (j = 0; j < interviews.size(); j++){
-        if(!strcmp(interviews[j]->getCandidate(), candidates[i])){
+        if(!strcmp(interviews[j]->getCandidato(), candidates[i])){
             do {
                 cout << "The candidate already has an interview date, replace it?" << endl;
                 cout << "  1. Yes" << endl;
@@ -195,8 +195,8 @@ void Sistema::interviewGuide(){
                 return;
             }
     }
-    for(j = 0; j < interviews.size(); j++)
-        if(!strcmp(interviews[j]->getCandidate(), candidates[i])){
+    for(int j = 0; j < interviews.size(); j++)
+        if(!strcmp(interviews[j]->getCandidato(), candidates[i])){
             cout << "Date of the interview: " << interviews[j]->getDate()[0] << "/" 
             << interviews[j]->getDate()[1] << "/" << interviews[j]->getDate()[2] << " " 
             << interviews[j]->getDate()[3] << ":" << interviews[j]->getDate()[4];
@@ -204,63 +204,46 @@ void Sistema::interviewGuide(){
             cout << "Not scheduled interview" << endl;
         }
     cout << "Personal data:" << endl;
-    cout << "   Name: " << candidate[i]->getName() << endl;
-    cout << "   Age: " << candidate[i]->getAge() << endl;
-    cout << "   Correo: " << candidate[i]->getCorreo() << endl;
-    cout << "   LinkedIn url: " << candidate[i]->getUrlLinkedIn() << endl;
-    cout << "   GitHub url: " << candidate[i]->getUrlGitHub() << endl;
-    cout << "   Passport num: " << candidate[i]->getNumPassport() << endl;
-    cout << "   Aspirated position: " << candidate[i]->getPosition() << endl;
-    cout << "   Nationality: " << candidate[i]->getNationality()->getName() << endl;
+    cout << "   Name: " << candidates[i]->getName() << endl;
+    cout << "   Age: " << candidates[i]->getAge() << endl;
+    cout << "   Correo: " << candidates[i]->getCorreo() << endl;
+    cout << "   LinkedIn url: " << candidates[i]->getUrlLinkedIn() << endl;
+    cout << "   GitHub url: " << candidates[i]->getUrlGitHub() << endl;
+    cout << "   Passport num: " << candidates[i]->getNumPassport() << endl;
+    cout << "   Aspirated position: " << candidates[i]->getPosition() << endl;
+    cout << "   Nationality: " << candidates[i]->getNationality()->getName() << endl;
     cout << "Country of origin information:" << endl;
-    cout << "   Demonym: " << candidate[i]->getNationality()->getDemonym() << endl;
-    cout << "   Is expressive?: " << candidate[i]->getNationality()->getTypeExpressive() ? "Yes" : "No" << endl;
-    cout << "   Eye contact: " << candidate[i]->getNationality()->getEyeContact() << endl;
-    cout << "   Touching: " << candidate[i]->getNationality()->getTouch() << endl;
-    cout << "   Distance level: " << candidate[i]->getNationality()->getDistanceLevel() << endl;
+    cout << "   Demonym: " << candidates[i]->getNationality()->getDemonym() << endl;
+    cout << "   Is expressive?: " << candidates[i]->getNationality()->isTypeExpressive() ? "Yes" : "No" << endl;
+    cout << "   Eye contact: " << candidates[i]->getNationality()->getEyeContact() << endl;
+    cout << "   Touching: " << candidates[i]->getNationality()->getTouch() << endl;
+    cout << "   Distance level: " << candidates[i]->getNationality()->getDistanceLevel() << endl;
     cout << "Country of origin holiday:" << endl;
-    for(i;candidate[i]->getNationality()->getHolidays()){
-        cout << "   Name: " << candidate[i]->getNationality()->getHolidays()[i]->getName() << endl;
-        cout << "   Description: " << candidate[i]->getNationality()->getHolidays()[i]->getName() << endl;
+    for(i;candidates[i]->getNationality()->getHolidays()){
+        cout << "   Name: " << candidates[i]->getNationality()->getHolidays()[i]->getName() << endl;
+        cout << "   Description: " << candidates[i]->getNationality()->getHolidays()[i]->getName() << endl;
     }
 }
 
-<<<<<<< HEAD
-=======
+
+
 void Sistema::createAprovalLetter(){
-    
-}
-
->>>>>>> 781688c07ee22977fb35d6258ce15c09b59992ae
-//Esta función nos ayuda a crear un archivo donde se guardaran todos los datos del candidato y el estado de la entrevista.
-/*
-void Sistema::interviewGuide() {
-        string name;
-        ofstream archivo;
-        string nombreArchivo,frase;
-        char rpt;
-
-        cout<<"Digite el nombre del archivo: ";
-        getline(cin,nombreArchivo);
-
-        archivo.open(nombreArchivo.c_str(),ios::out); //Creamos el archivo
-
-        if (archivo.fail()) { //Si a ocurrido algun error
-            cout<<"No se pudo abrir el archivo";
+    int opc1;
+    ifstream archivo;
+    string texto;
+    cout<<"Does the user pass the tests? 1.Yes/2.No"<<endl; cin>>opc1;
+    if(opc1=1){
+        archivo.open("Welcome Letter.txt", ios::in);//se abre el archivo en modo lectura
+        if(archivo.fail()){
+            cout<<"could not open the file";
             exit(1);
         }
-
-        else {
-            for (int i = 0; i < candidate.size(); i++){
-                if (candidate[i]->getName() == name) {
-
-                }
-                archivo << "The candidate's name is: " <<
-            }
+        while(!archivo.eof()){//mientras no sea el final del archivo
+            getline(archivo,texto);
+            cout<<texto<<endl;
         }
-
-        archivo.close(); //Cerramos el archivo
-
+        archivo.close();//se cierra el archivo
+    }else{
+        exit(1);
+    }
 }
-<<<<<<< HEAD
-*/

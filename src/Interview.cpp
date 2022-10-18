@@ -20,3 +20,7 @@ void Interview::setHired(bool hired) {
 Candidato *Interview::getCandidato() const{
     return candidato;
 }
+
+const vector<int *> Interview::getDate() const {
+    return date;
+}

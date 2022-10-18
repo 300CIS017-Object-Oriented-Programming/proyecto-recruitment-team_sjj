@@ -105,3 +105,7 @@ Nationality::Nationality(string name, string demonym, bool typeExpressive, strin
                          string touch, string distanceLevel) : name(name), demonym(demonym), typeExpressive(typeExpressive), eyeContact(eyeContact), touch(touch), distanceLevel(distanceLevel){
 
 }
+
+const vector<NationalHolidays *> Nationality::getHolidays() const {
+    return natHd;
+}

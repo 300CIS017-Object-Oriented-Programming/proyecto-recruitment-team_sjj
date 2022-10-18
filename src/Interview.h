@@ -18,7 +18,7 @@ using std::cout;
 class Interview {
 private:
     Candidato * candidato;
-    vector<int> date;
+    vector<int *> date;
     bool hired;
 public:
     Interview();
@@ -29,6 +29,8 @@ public:
     void setHired(bool hired);
 
     void mostrarDatos();
+
+    const vector<int *> getDate() const;
 
     Candidato *getCandidato() const;
 };

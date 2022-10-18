@@ -50,6 +50,7 @@ public:
     const string &getEyeContact() const;
     const string &getTouch() const;
     const string &getDistanceLevel() const;
+    const vector<NationalHolidays *> getHolidays() const;
 
     Nationality(string name, string demonym, bool typeExpressive, string eyeContact, string touch, string distanceLevel);
 

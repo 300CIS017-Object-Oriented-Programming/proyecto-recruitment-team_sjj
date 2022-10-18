@@ -8,6 +8,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Nationality.h"
 
 using std::string;
 using std::vector;
@@ -24,7 +25,7 @@ private:
     string urlGitHub;
     int numPassport;
     string position;
-    Candidato * nationality;
+    Nationality * nationality;
     string resum;
     void inicializarDatos();
 public:
@@ -38,7 +39,7 @@ public:
     const string &getUrlGitHub() const;
     int &getNumPassport();
     const string &getPosition() const;
-    Candidato *getNationality() const;
+    Nationality *getNationality() const;
     const string &getResum() const;
 
     void setName(const string &name);
@@ -48,7 +49,7 @@ public:
     void setUrlGitHub(const string &urlGitHub);
     void setNumPassport(int numPassport);
     void setPosition(const string &position);
-    void setNationality(Candidato *nacionality);
+    void setNationality(Nationality *nacionality);
     void setResum(const string &resum);
 
     Candidato(string name, int age, string urlLinkedIn, string urlGitHub, int numPassport, Candidato *nacionality);
