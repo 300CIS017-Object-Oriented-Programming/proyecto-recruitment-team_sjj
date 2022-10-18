@@ -7,6 +7,7 @@
 
 #include "Nationality.h"
 #include "Candidato.h"
+#include "Interview.h"
 #include <iostream>
 #include <vector>
 
@@ -18,8 +19,9 @@ using std::cin;
 
 class Sistema {
 private:
-    vector<Nationality*> Nals;
-    vector<Candidato*> candidate;
+    vector<Nationality*> Nationalities;
+    vector<Candidato*> candidates;
+    vector<Interview*> interviews;
     void initializarDatos();
 
 public:
@@ -28,7 +30,6 @@ public:
 
     void addCandidate();
     void scheduleInterview();
-    void judgeInterview();
     void infoNacionalidad();
     void interviewGuide();
     void createAprovalLetter();

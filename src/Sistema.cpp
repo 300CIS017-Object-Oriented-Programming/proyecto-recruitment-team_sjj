@@ -3,6 +3,7 @@
 //
 
 #include "Sistema.h"
+#include <string.h>
 #include <fstream>
 #include <stdlib.h>
 #include <iostream>
@@ -18,7 +19,7 @@ void Sistema::addCandidate() {
     int numPassport;
     string position;
     int nationality;
-    string resum;
+    string resume;
     Candidato * candidateProfile;
 
     //Pedimos los datos del candidato y los metemos en un vector para poder acceder más fácil a ellos.
@@ -39,28 +40,28 @@ void Sistema::addCandidate() {
     } while (nationality < 1 or nationality > 3);
 
     candidateProfile = new Candidato(name, age, urlLinkedIn, urlGitHub, numPassport, nationality);
-    candidate.push_back(candidateProfile);
+    candidates.push_back(candidateProfile);
 
     /*Recorremos el vector para poder acceder a la información en la posición en la que la está guardando dependiendo del nuemro que
     digite el usuario.*/
     if (nationality = 1){
-        for (int i = 0; i < Nals.size(); i++){
-            if(Nals[i]->getName() == "Gales"){
-                Nals[i]->mostrarDatos();
+        for (int i = 0; i < Nationalities.size(); i++){
+            if(Nationalities[i]->getName() == "Gales"){
+                Nationalities[i]->mostrarDatos();
             }
         }
     }
     else if(nationality = 2){
-        for (int i = 0; i < Nals.size(); i++){
-            if(Nals[i]->getName() == "Madagascar"){
-                Nals[i]->mostrarDatos();
+        for (int i = 0; i < Nationalities.size(); i++){
+            if(Nationalities[i]->getName() == "Madagascar"){
+                Nationalities[i]->mostrarDatos();
             }
         }
     }
     else {
-        for (int i = 0; i < Nals.size(); i++){
-            if(Nals[i]->getName() == "Lebanon"){
-                Nals[i]->mostrarDatos();
+        for (int i = 0; i < Nationalities.size(); i++){
+            if(Nationalities[i]->getName() == "Lebanon"){
+                Nationalities[i]->mostrarDatos();
             }
         }
     }
@@ -78,7 +79,7 @@ void Sistema::infoNacionalidad() {
     bool typeExpressive = true;
 
     auto * nationalityGales = new Nationality(name, demonym, typeExpressive, eyeContact, touch, distanceLevel);
-    Nals.push_back(nationalityGales);
+    Nationalities.push_back(nationalityGales);
 
     string name2 = "Madagascar";
     string demonym2 = "Malagasy";
@@ -93,7 +94,7 @@ void Sistema::infoNacionalidad() {
     bool typeExpressive2 = true;
 
     auto * NationalityMadagascar = new Nationality(name2, demonym2, typeExpressive2, eyeContact2, touch2, distanceLevel2);
-    Nals.push_back(NationalityMadagascar);
+    Nationalities.push_back(NationalityMadagascar);
 
     string name3 = "Lebanon";
     string demonym3 = "Lebanese";
@@ -111,41 +112,120 @@ void Sistema::infoNacionalidad() {
     bool typeExpressive3 = true;
 
     auto * nationalityLebanon = new Nationality(name3, demonym3, typeExpressive3, eyeContact3, touch3, distanceLevel3);
-    Nals.push_back(nationalityLebanon);
+    Nationalities.push_back(nationalityLebanon);
 
 }
 
 void Sistema::scheduleInterview(){
-
+    int opt, i, j;
+    string candidate = "";
+    fflush(stdin); cout << "Write the name of the candidate for set an interview: " << endl; getline(cin,candidate);
+    for (i = 0; i < candidates.size(); i++){
+        if(!strcmp(candidates[i]->getName(), candidate)){
+            break;
+        } else
+            if(i == candidates.size()){
+                cout << "Candidate not found" << endl;
+                return;
+            }
+    }
+    for (j = 0; j < interviews.size(); j++){
+        if(!strcmp(interviews[j]->getCandidate(), candidates[i])){
+            do {
+                cout << "The candidate already has an interview date, replace it?" << endl;
+                cout << "  1. Yes" << endl;
+                cout << "  2. No" << endl;
+                cin >> opt;
+                if (opt != 1 and opt != 2)
+                    cout << "Please, select a valid option." << endl;
+            } while (opt != 1 and opt != 2);
+            if(opt == 2)
+                return;
+            break;
+        }
+    }
+    Interview * interview = new Interview();
+    interviews.push_back(interview);
+    if(j == interviews.size() - 1)
+        j++;
+    cout << "Set year for the interview: " << endl;
+    cin >> interviews[j]->getDate()[0];
+        do{
+            cout << "Set month for the interview: " << endl;
+            cin >> interviews[j]->getDate()[1];
+            if(interviews[j]->getDate()[1] > 12 or interviews[j]->getDate()[1] < 1)
+                cout << "Invalid month" << endl;
+        } while(interviews[j]->getDate()[1] > 12 or interviews[j]->getDate()[1] < 1);
+        do{
+            cout << "Set day for the interview: " << endl;
+            cin >> interviews[j]->getDate()[2];
+            if(interviews[j]->getDate()[2] > 31 or interviews[j]->getDate()[2] < 1)
+                cout << "Invalid day" << endl;
+        } while(interviews[j]->getDate()[2] > 31 or interviews[j]->getDate()[2] < 1);
+        do{
+            cout << "Set hour for the interview: " << endl;
+            cin >> interviews[j]->getDate()[3];
+            if(interviews[j]->getDate()[3] > 31 or interviews[j]->getDate()[3] < 1)
+                cout << "Invalid hour" << endl;
+        } while(interviews[j]->getDate()[3] > 23 or interviews[j]->getDate()[3] < 1);
+        do{
+            cout << "Set minute for the interview: " << endl;
+            cin >> interviews[j]->getDate()[4];
+            if(interviews[j]->getDate()[4] > 59 or interviews[j]->getDate()[4] < 1)
+                cout << "Invalid minute" << endl;
+        } while(interviews[j]->getDate()[4] > 59 or interviews[j]->getDate()[4] < 1);
+    cout << "Interviews's date correctly scheduled" << endl;
 }
 
-void Sistema::judgeInterview(){
-
-}
-
-void Sistema::createAprovalLetter(){
-    int opc1;
-    ifstream archivo;
-    string texto;
-    cout<<"Does the user pass the tests? 1.Yes/2.No"<<endl; cin>>opc1;
-    if(opc1=1){
-        archivo.open("Welcome Letter.txt", ios::in);//se abre el archivo en modo lectura
-        if(archivo.fail()){
-            cout<<"could not open the file";
-            exit(1);
+void Sistema::interviewGuide(){
+    int opt, i;
+    string candidate = "";
+    fflush(stdin); cout << "Write the name of the candidate for look for a guide: " << endl; getline(cin,candidate);
+    for (i = 0; i < candidates.size(); i++){
+        if(!strcmp(candidates[i]->getName(), candidate)){
+            break;
+        } else
+            if(i == candidates.size()){
+                cout << "Candidate not found" << endl;
+                return;
+            }
+    }
+    for(j = 0; j < interviews.size(); j++)
+        if(!strcmp(interviews[j]->getCandidate(), candidates[i])){
+            cout << "Date of the interview: " << interviews[j]->getDate()[0] << "/" 
+            << interviews[j]->getDate()[1] << "/" << interviews[j]->getDate()[2] << " " 
+            << interviews[j]->getDate()[3] << ":" << interviews[j]->getDate()[4];
+        } else{
+            cout << "Not scheduled interview" << endl;
         }
-        while(!archivo.eof()){//mientras no sea el final del archivo
-            getline(archivo,texto);
-            cout<<texto<<endl;
-        }
-        archivo.close();//se cierra el archivo
-    }else{
-        exit(1);
+    cout << "Personal data:" << endl;
+    cout << "   Name: " << candidate[i]->getName() << endl;
+    cout << "   Age: " << candidate[i]->getAge() << endl;
+    cout << "   Correo: " << candidate[i]->getCorreo() << endl;
+    cout << "   LinkedIn url: " << candidate[i]->getUrlLinkedIn() << endl;
+    cout << "   GitHub url: " << candidate[i]->getUrlGitHub() << endl;
+    cout << "   Passport num: " << candidate[i]->getNumPassport() << endl;
+    cout << "   Aspirated position: " << candidate[i]->getPosition() << endl;
+    cout << "   Nationality: " << candidate[i]->getNationality()->getName() << endl;
+    cout << "Country of origin information:" << endl;
+    cout << "   Demonym: " << candidate[i]->getNationality()->getDemonym() << endl;
+    cout << "   Is expressive?: " << candidate[i]->getNationality()->getTypeExpressive() ? "Yes" : "No" << endl;
+    cout << "   Eye contact: " << candidate[i]->getNationality()->getEyeContact() << endl;
+    cout << "   Touching: " << candidate[i]->getNationality()->getTouch() << endl;
+    cout << "   Distance level: " << candidate[i]->getNationality()->getDistanceLevel() << endl;
+    cout << "Country of origin holiday:" << endl;
+    for(i;candidate[i]->getNationality()->getHolidays()){
+        cout << "   Name: " << candidate[i]->getNationality()->getHolidays()[i]->getName() << endl;
+        cout << "   Description: " << candidate[i]->getNationality()->getHolidays()[i]->getName() << endl;
     }
 }
 
-//Esta función nos ayuda a crear un archivo donde se guardaran todos los datos del candidato y el estado de la entrevista.
+void Sistema::createAprovalLetter(){
+    
+}
 
+//Esta función nos ayuda a crear un archivo donde se guardaran todos los datos del candidato y el estado de la entrevista.
+/*
 void Sistema::interviewGuide() {
         string name;
         ofstream archivo;
@@ -174,3 +254,4 @@ void Sistema::interviewGuide() {
         archivo.close(); //Cerramos el archivo
 
 }
+ */
