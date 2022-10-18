@@ -1,3 +1,0 @@
-"C:\Users\JOSUE DAVID\Desktop\CLion 2022.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\RecruiterSoftware_tst.dir/objects.a
-C:\Users\JOSUED~1\Desktop\CLION2~1.2\bin\mingw\bin\ar.exe qc CMakeFiles\RecruiterSoftware_tst.dir/objects.a @CMakeFiles\RecruiterSoftware_tst.dir\objects1.rsp
-C:\Users\JOSUED~1\Desktop\CLION2~1.2\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\RecruiterSoftware_tst.dir/objects.a -Wl,--no-whole-archive -o RecruiterSoftware_tst.exe -Wl,--out-implib,libRecruiterSoftware_tst.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\RecruiterSoftware_tst.dir\linklibs.rsp
