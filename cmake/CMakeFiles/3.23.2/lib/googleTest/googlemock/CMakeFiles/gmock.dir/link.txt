@@ -1,0 +1,2 @@
+C:\Users\JOSUED~1\Desktop\CLION2~1.2\bin\mingw\bin\ar.exe qc ..\..\libgmockd.a "CMakeFiles/gmock.dir/src/gmock-all.cc.obj"
+C:\Users\JOSUED~1\Desktop\CLION2~1.2\bin\mingw\bin\ranlib.exe ..\..\libgmockd.a
