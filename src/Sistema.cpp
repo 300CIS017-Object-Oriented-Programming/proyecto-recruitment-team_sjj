@@ -123,10 +123,6 @@ void Sistema::judgeInterview(){
 
 }
 
-void Sistema::infoNacionalidad(){
-
-}
-
 void Sistema::interviewGuide(){
 
 }
