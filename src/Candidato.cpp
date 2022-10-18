@@ -81,8 +81,16 @@ void Candidato::setNumPassport(int numPassport) {
 }
 
 Candidato::Candidato(string name, int age, string urlLinkedIn, string urlGitHub, int numPassport,
-                     int nationality) : name(name), age(age), urlLinkedIn(urlLinkedIn), urlGitHub(urlGitHub), numPassport(numPassport), nationality(nationality) {
+                     Candidato *nacionality) : name(name), age(age), urlLinkedIn(urlLinkedIn), urlGitHub(urlGitHub), numPassport(numPassport), &nacionality {
 
+}
+
+Candidato *Candidato::getNationality() const {
+    return nationality;
+}
+
+void Candidato::setNationality(Candidato *nacionality) {
+    Candidato::nationality = nacionality;
 }
 
 

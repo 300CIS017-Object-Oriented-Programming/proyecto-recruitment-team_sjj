@@ -15,3 +15,16 @@
 461	1734	6877613120786414	src/CMakeFiles/RecruiterSoftware_lib.dir/Nationality.cpp.obj	67514212e02c229c
 440	1916	6877613122611988	src/CMakeFiles/RecruiterSoftware_lib.dir/Sistema.cpp.obj	610feb48aa6964de
 1916	2378	6877613127242561	src/libRecruiterSoftware_lib.a	e6181f72bf0af929
+36	2955	6877670871967819	src/CMakeFiles/RecruiterSoftware_lib.dir/Candidato.cpp.obj	2ced928ec9570ed7
+17	2957	6877670871967819	src/CMakeFiles/RecruiterSoftware_run.dir/Candidato.cpp.obj	5b83037963bb0714
+56	2980	6877670872252883	src/CMakeFiles/RecruiterSoftware_lib.dir/main.cpp.obj	41f1e23d92ed763d
+30	2985	6877670872297885	src/CMakeFiles/RecruiterSoftware_run.dir/main.cpp.obj	d78c53b1593a792a
+18	1226	6877671588668456	src/CMakeFiles/RecruiterSoftware_run.dir/Sistema.cpp.obj	9164efd84400a32e
+30	1239	6877671588804808	src/CMakeFiles/RecruiterSoftware_lib.dir/Sistema.cpp.obj	610feb48aa6964de
+38	2592	6877671602331695	tst/CMakeFiles/RecruiterSoftware_tst.dir/SistemTest.cpp.obj	f5d8caacecb414ac
+14	1600	6877675474592348	tst/CMakeFiles/RecruiterSoftware_tst.dir/SistemTest.cpp.obj	f5d8caacecb414ac
+27	974	6877690299839712	src/CMakeFiles/RecruiterSoftware_lib.dir/main.cpp.obj	41f1e23d92ed763d
+18	993	6877690300024194	src/CMakeFiles/RecruiterSoftware_run.dir/main.cpp.obj	d78c53b1593a792a
+14	1145	6877690301544467	src/CMakeFiles/RecruiterSoftware_run.dir/Sistema.cpp.obj	9164efd84400a32e
+35	1166	6877690301814498	src/CMakeFiles/RecruiterSoftware_lib.dir/Sistema.cpp.obj	610feb48aa6964de
+39	1861	6877690308780716	tst/CMakeFiles/RecruiterSoftware_tst.dir/SistemTest.cpp.obj	f5d8caacecb414ac

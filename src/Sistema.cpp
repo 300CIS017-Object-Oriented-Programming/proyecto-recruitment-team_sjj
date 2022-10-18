@@ -37,8 +37,7 @@ void Sistema::addCandidate() {
         if (nationality < 1 or nationality > 3)
             cout << "Please, select a valid option." << endl;
     } while (nationality < 1 or nationality > 3);
-
-    candidateProfile = new Candidato(name, age, urlLinkedIn, urlGitHub, numPassport, nationality);
+    candidateProfile = new Candidato(name, age, urlLinkedIn, urlGitHub, numPassport, &nationality);
     candidate.push_back(candidateProfile);
 
     /*Recorremos el vector para poder acceder a la información en la posición en la que la está guardando dependiendo del nuemro que
@@ -145,7 +144,7 @@ void Sistema::createAprovalLetter(){
 }
 
 //Esta función nos ayuda a crear un archivo donde se guardaran todos los datos del candidato y el estado de la entrevista.
-
+/*
 void Sistema::interviewGuide() {
         string name;
         ofstream archivo;
@@ -174,3 +173,4 @@ void Sistema::interviewGuide() {
         archivo.close(); //Cerramos el archivo
 
 }
+*/

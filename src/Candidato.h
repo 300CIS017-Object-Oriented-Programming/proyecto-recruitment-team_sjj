@@ -24,7 +24,7 @@ private:
     string urlGitHub;
     int numPassport;
     string position;
-    int nationality;
+    Candidato * nationality;
     string resum;
     void inicializarDatos();
 public:
@@ -38,7 +38,7 @@ public:
     const string &getUrlGitHub() const;
     int &getNumPassport();
     const string &getPosition() const;
-    const string &getNationality() const;
+    Candidato *getNationality() const;
     const string &getResum() const;
 
     void setName(const string &name);
@@ -48,10 +48,10 @@ public:
     void setUrlGitHub(const string &urlGitHub);
     void setNumPassport(int numPassport);
     void setPosition(const string &position);
-    void setNationality(const string &nationality);
+    void setNationality(Candidato *nacionality);
     void setResum(const string &resum);
 
-    Candidato(string name, int age, string urlLinkedIn, string urlGitHub, int numPassport, int nationality);
+    Candidato(string name, int age, string urlLinkedIn, string urlGitHub, int numPassport, Candidato *nacionality);
 
     void mostrarDatos();
 };
