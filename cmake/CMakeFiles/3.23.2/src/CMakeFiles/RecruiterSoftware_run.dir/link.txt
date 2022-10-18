@@ -1,0 +1,3 @@
+"C:\Users\JOSUE DAVID\Desktop\CLion 2022.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\RecruiterSoftware_run.dir/objects.a
+C:\Users\JOSUED~1\Desktop\CLION2~1.2\bin\mingw\bin\ar.exe qc CMakeFiles\RecruiterSoftware_run.dir/objects.a @CMakeFiles\RecruiterSoftware_run.dir\objects1.rsp
+C:\Users\JOSUED~1\Desktop\CLION2~1.2\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\RecruiterSoftware_run.dir/objects.a -Wl,--no-whole-archive -o RecruiterSoftware_run.exe -Wl,--out-implib,libRecruiterSoftware_run.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\RecruiterSoftware_run.dir\linklibs.rsp
