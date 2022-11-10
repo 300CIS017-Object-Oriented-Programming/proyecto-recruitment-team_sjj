@@ -72,6 +72,14 @@ void Candidato::setUrlGitHub(const string &urlGithub) {
     Candidato::urlGitHub = urlGitHub;
 }
 
+void Candidato::setPosition(const std::string &position) {
+    Candidato::position = position;
+}
+
+const string &Candidato::getPosition() const {
+    return position;
+}
+
 int &Candidato::getNumPassport(){
     return numPassport;
 }

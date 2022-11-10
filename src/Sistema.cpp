@@ -124,7 +124,7 @@ void Sistema::scheduleInterview(){
     string candidate = "";
     fflush(stdin); cout << "Write the name of the candidate for set an interview: " << endl; getline(cin,candidate);
     for (i = 0; i < candidates.size(); i++){
-        if(!strcmp(candidates[i]->getName(), candidate)){
+        if(candidates[i]->getName() == candidate){
             break;
         } else
             if(i == candidates.size()){
@@ -133,7 +133,7 @@ void Sistema::scheduleInterview(){
             }
     }
     for (j = 0; j < interviews.size(); j++){
-        if(!strcmp(interviews[j]->getCandidato()->getName(), candidates[i]->getName())){
+        if(interviews[j]->getCandidato()->getName() == candidates[i]->getName()){
             do {
                 cout << "The candidate already has an interview date, replace it?" << endl;
                 cout << "  1. Yes" << endl;
@@ -158,25 +158,25 @@ void Sistema::scheduleInterview(){
             cin >> *interviews[j]->getDate()[1];
             if(*interviews[j]->getDate()[1] > 12 || *interviews[j]->getDate()[1] < 1)
                 cout << "Invalid month" << endl;
-        } while(*interviews[j]->getDate()[1] > 12 || *interviews[j]->getDate()[1] < 1);
+        } while(*interviews[j]->getDate()[1] <= 12 || *interviews[j]->getDate()[1] >= 1);
         do{
             cout << "Set day for the interview: " << endl;
             cin >> *interviews[j]->getDate()[2];
             if(*interviews[j]->getDate()[2] > 31 || *interviews[j]->getDate()[2] < 1)
                 cout << "Invalid day" << endl;
-        } while(*interviews[j]->getDate()[2] > 31 || *interviews[j]->getDate()[2] < 1);
+        } while(*interviews[j]->getDate()[2] <= 31 || *interviews[j]->getDate()[2] >= 1);
         do{
             cout << "Set hour for the interview: " << endl;
             cin >> *interviews[j]->getDate()[3];
-            if(*interviews[j]->getDate()[3] > 31 || *interviews[j]->getDate()[3] < 1)
+            if(*interviews[j]->getDate()[3] > 24 || *interviews[j]->getDate()[3] < 1)
                 cout << "Invalid hour" << endl;
-        } while(*interviews[j]->getDate()[3] > 23 || *interviews[j]->getDate()[3] < 1);
+        } while(*interviews[j]->getDate()[3] <= 23 || *interviews[j]->getDate()[3] >= 1);
         do{
             cout << "Set minute for the interview: " << endl;
             cin >> *interviews[j]->getDate()[4];
             if(*interviews[j]->getDate()[4] > 59 || *interviews[j]->getDate()[4] < 1)
                 cout << "Invalid minute" << endl;
-        } while(*interviews[j]->getDate()[4] > 59 || *interviews[j]->getDate()[4] < 1);
+        } while(*interviews[j]->getDate()[4] <= 59 || *interviews[j]->getDate()[4] >= 1);
     cout << "Interviews's date correctly scheduled" << endl;
 }
 
@@ -185,7 +185,7 @@ void Sistema::interviewGuide(){
     string candidate = "";
     fflush(stdin); cout << "Write the name of the candidate for look for a guide: " << endl; getline(cin,candidate);
     for (i = 0; i < candidates.size(); i++){
-        if(!strcmp(candidates[i]->getName(), candidate)){
+        if(candidates[i]->getName() == candidate){
             break;
         } else
             if(i == candidates.size()){
@@ -194,7 +194,7 @@ void Sistema::interviewGuide(){
             }
     }
     for(int j = 0; j < interviews.size(); j++)
-        if(!strcmp(interviews[j]->getCandidato()->getName(), candidates[i]->getName())){
+        if(interviews[j]->getCandidato()->getName() == candidates[i]->getName()){
             cout << "Date of the interview: " << interviews[j]->getDate()[0] << "/" 
             << interviews[j]->getDate()[1] << "/" << interviews[j]->getDate()[2] << " " 
             << interviews[j]->getDate()[3] << ":" << interviews[j]->getDate()[4];
