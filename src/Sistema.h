@@ -19,7 +19,7 @@ using std::cin;
 
 class Sistema {
 private:
-    vector<Nationality*> Nationalities;
+    vector<Nationality*> nationalities;
     vector<Candidato*> candidates;
     vector<Interview*> interviews;
     void initializarDatos();
@@ -33,6 +33,10 @@ public:
     void infoNacionalidad();
     void interviewGuide();
     void createAprovalLetter();
+
+    const vector<Nationality*> &getNationalities () const;
+    const vector<Candidato*> &getCandidates() const;
+    const vector<Interview*> &getInterviews() const;
 
 };
 

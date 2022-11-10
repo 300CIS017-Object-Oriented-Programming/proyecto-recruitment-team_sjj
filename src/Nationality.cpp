@@ -106,6 +106,6 @@ Nationality::Nationality(string name, string demonym, bool typeExpressive, strin
 
 }
 
-const vector<NationalHolidays *> Nationality::getHolidays() const {
+const vector<NationalHolidays*> Nationality::getHolidays() const {
     return natHd;
 }

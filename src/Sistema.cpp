@@ -35,38 +35,36 @@ void Sistema::addCandidate() {
         cout << "  2. Madagascar" << endl;
         cout << "  3. Lebanon" << endl;
         cin >> nationality;
-        if (nationality < 1 or nationality > 3)
+        if (nationality < 1 || nationality > 3)
             cout << "Please, select a valid option." << endl;
-    } while (nationality < 1 or nationality > 3);
+    } while (nationality < 1 || nationality > 3);
 
-    candidateProfile = new Candidato(name, age, urlLinkedIn, urlGitHub, numPassport, &nationality);
-    candidate.push_back(candidateProfile);
+    candidateProfile = new Candidato(name, age, urlLinkedIn, urlGitHub, numPassport, 
+        getNationalities()[nationality-1]);
 
-
-    candidateProfile = new Candidato(name, age, urlLinkedIn, urlGitHub, numPassport, nationality);
     candidates.push_back(candidateProfile);
 
 
     /*Recorremos el vector para poder acceder a la información en la posición en la que la está guardando dependiendo del nuemro que
     digite el usuario.*/
     if (nationality = 1){
-        for (int i = 0; i < Nationalities.size(); i++){
-            if(Nationalities[i]->getName() == "Gales"){
-                Nationalities[i]->mostrarDatos();
+        for (int i = 0; i < nationalities.size(); i++){
+            if(nationalities[i]->getName() == "Gales"){
+                nationalities[i]->mostrarDatos();
             }
         }
     }
     else if(nationality = 2){
-        for (int i = 0; i < Nationalities.size(); i++){
-            if(Nationalities[i]->getName() == "Madagascar"){
-                Nationalities[i]->mostrarDatos();
+        for (int i = 0; i < nationalities.size(); i++){
+            if(nationalities[i]->getName() == "Madagascar"){
+                nationalities[i]->mostrarDatos();
             }
         }
     }
     else {
-        for (int i = 0; i < Nationalities.size(); i++){
-            if(Nationalities[i]->getName() == "Lebanon"){
-                Nationalities[i]->mostrarDatos();
+        for (int i = 0; i < nationalities.size(); i++){
+            if(nationalities[i]->getName() == "Lebanon"){
+                nationalities[i]->mostrarDatos();
             }
         }
     }
@@ -84,7 +82,7 @@ void Sistema::infoNacionalidad() {
     bool typeExpressive = true;
 
     auto * nationalityGales = new Nationality(name, demonym, typeExpressive, eyeContact, touch, distanceLevel);
-    Nationalities.push_back(nationalityGales);
+    nationalities.push_back(nationalityGales);
 
     string name2 = "Madagascar";
     string demonym2 = "Malagasy";
@@ -99,7 +97,7 @@ void Sistema::infoNacionalidad() {
     bool typeExpressive2 = true;
 
     auto * NationalityMadagascar = new Nationality(name2, demonym2, typeExpressive2, eyeContact2, touch2, distanceLevel2);
-    Nationalities.push_back(NationalityMadagascar);
+    nationalities.push_back(NationalityMadagascar);
 
     string name3 = "Lebanon";
     string demonym3 = "Lebanese";
@@ -117,7 +115,7 @@ void Sistema::infoNacionalidad() {
     bool typeExpressive3 = true;
 
     auto * nationalityLebanon = new Nationality(name3, demonym3, typeExpressive3, eyeContact3, touch3, distanceLevel3);
-    Nationalities.push_back(nationalityLebanon);
+    nationalities.push_back(nationalityLebanon);
 
 }
 
@@ -135,15 +133,15 @@ void Sistema::scheduleInterview(){
             }
     }
     for (j = 0; j < interviews.size(); j++){
-        if(!strcmp(interviews[j]->getCandidato(), candidates[i])){
+        if(!strcmp(interviews[j]->getCandidato()->getName(), candidates[i]->getName())){
             do {
                 cout << "The candidate already has an interview date, replace it?" << endl;
                 cout << "  1. Yes" << endl;
                 cout << "  2. No" << endl;
                 cin >> opt;
-                if (opt != 1 and opt != 2)
+                if (opt != 1 && opt != 2)
                     cout << "Please, select a valid option." << endl;
-            } while (opt != 1 and opt != 2);
+            } while (opt != 1 && opt != 2);
             if(opt == 2)
                 return;
             break;
@@ -154,31 +152,31 @@ void Sistema::scheduleInterview(){
     if(j == interviews.size() - 1)
         j++;
     cout << "Set year for the interview: " << endl;
-    cin >> interviews[j]->getDate()[0];
+    cin >> *interviews[j]->getDate()[0];
         do{
             cout << "Set month for the interview: " << endl;
-            cin >> interviews[j]->getDate()[1];
-            if(interviews[j]->getDate()[1] > 12 or interviews[j]->getDate()[1] < 1)
+            cin >> *interviews[j]->getDate()[1];
+            if(*interviews[j]->getDate()[1] > 12 || *interviews[j]->getDate()[1] < 1)
                 cout << "Invalid month" << endl;
-        } while(interviews[j]->getDate()[1] > 12 or interviews[j]->getDate()[1] < 1);
+        } while(*interviews[j]->getDate()[1] > 12 || *interviews[j]->getDate()[1] < 1);
         do{
             cout << "Set day for the interview: " << endl;
-            cin >> interviews[j]->getDate()[2];
-            if(interviews[j]->getDate()[2] > 31 or interviews[j]->getDate()[2] < 1)
+            cin >> *interviews[j]->getDate()[2];
+            if(*interviews[j]->getDate()[2] > 31 || *interviews[j]->getDate()[2] < 1)
                 cout << "Invalid day" << endl;
-        } while(interviews[j]->getDate()[2] > 31 or interviews[j]->getDate()[2] < 1);
+        } while(*interviews[j]->getDate()[2] > 31 || *interviews[j]->getDate()[2] < 1);
         do{
             cout << "Set hour for the interview: " << endl;
-            cin >> interviews[j]->getDate()[3];
-            if(interviews[j]->getDate()[3] > 31 or interviews[j]->getDate()[3] < 1)
+            cin >> *interviews[j]->getDate()[3];
+            if(*interviews[j]->getDate()[3] > 31 || *interviews[j]->getDate()[3] < 1)
                 cout << "Invalid hour" << endl;
-        } while(interviews[j]->getDate()[3] > 23 or interviews[j]->getDate()[3] < 1);
+        } while(*interviews[j]->getDate()[3] > 23 || *interviews[j]->getDate()[3] < 1);
         do{
             cout << "Set minute for the interview: " << endl;
-            cin >> interviews[j]->getDate()[4];
-            if(interviews[j]->getDate()[4] > 59 or interviews[j]->getDate()[4] < 1)
+            cin >> *interviews[j]->getDate()[4];
+            if(*interviews[j]->getDate()[4] > 59 || *interviews[j]->getDate()[4] < 1)
                 cout << "Invalid minute" << endl;
-        } while(interviews[j]->getDate()[4] > 59 or interviews[j]->getDate()[4] < 1);
+        } while(*interviews[j]->getDate()[4] > 59 || *interviews[j]->getDate()[4] < 1);
     cout << "Interviews's date correctly scheduled" << endl;
 }
 
@@ -196,7 +194,7 @@ void Sistema::interviewGuide(){
             }
     }
     for(int j = 0; j < interviews.size(); j++)
-        if(!strcmp(interviews[j]->getCandidato(), candidates[i])){
+        if(!strcmp(interviews[j]->getCandidato()->getName(), candidates[i]->getName())){
             cout << "Date of the interview: " << interviews[j]->getDate()[0] << "/" 
             << interviews[j]->getDate()[1] << "/" << interviews[j]->getDate()[2] << " " 
             << interviews[j]->getDate()[3] << ":" << interviews[j]->getDate()[4];
@@ -214,12 +212,15 @@ void Sistema::interviewGuide(){
     cout << "   Nationality: " << candidates[i]->getNationality()->getName() << endl;
     cout << "Country of origin information:" << endl;
     cout << "   Demonym: " << candidates[i]->getNationality()->getDemonym() << endl;
-    cout << "   Is expressive?: " << candidates[i]->getNationality()->isTypeExpressive() ? "Yes" : "No" << endl;
+    if( candidates[i]->getNationality()->isTypeExpressive() )
+        cout << "   Is expressive?: " << "Yes" << endl;
+    else
+        cout << "   Is expressive?: " << "No" << endl;
     cout << "   Eye contact: " << candidates[i]->getNationality()->getEyeContact() << endl;
     cout << "   Touching: " << candidates[i]->getNationality()->getTouch() << endl;
     cout << "   Distance level: " << candidates[i]->getNationality()->getDistanceLevel() << endl;
     cout << "Country of origin holiday:" << endl;
-    for(i;candidates[i]->getNationality()->getHolidays()){
+    for(i = 0; i <= candidates[i]->getNationality()->getHolidays().size(); i ++){
         cout << "   Name: " << candidates[i]->getNationality()->getHolidays()[i]->getName() << endl;
         cout << "   Description: " << candidates[i]->getNationality()->getHolidays()[i]->getName() << endl;
     }
@@ -246,4 +247,14 @@ void Sistema::createAprovalLetter(){
     }else{
         exit(1);
     }
+}
+
+const vector<Nationality*> &Sistema::getNationalities() const {
+    return nationalities;
+}
+const vector<Candidato*> &Sistema::getCandidates() const {
+    return candidates;
+}
+const vector<Interview*> &Sistema::getInterviews() const {
+    return interviews;
 }

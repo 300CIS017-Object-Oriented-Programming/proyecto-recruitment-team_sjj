@@ -33,9 +33,9 @@ int &inputValidation(const string &action) {
         cout << "  1. Yes" << endl;
         cout << "  2. No" << endl;
         cin >> *opt;
-        if (*opt != 1 and *opt != 2)
+        if (*opt != 1 && *opt != 2)
             cout << "Please, select a valid option." << endl;
-    } while (*opt != 1 and *opt != 2);
+    } while (*opt != 1 && *opt != 2);
     return * opt;
 }
 

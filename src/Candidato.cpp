@@ -6,15 +6,15 @@
 #include <iostream>
 
 Candidato::Candidato() {
-    name = "";
-    age = 0;
-    correo = "";
-    urlLinkedIn = "";
-    urlGitHub = "";
-    numPassport = 0;
-    position = "";
-    nationality = 0;
-    resum = "";
+    this->name = "";
+    this->age = 0;
+    this->correo = "";
+    this->urlLinkedIn = "";
+    this->urlGitHub = "";
+    this->numPassport = 0;
+    this->position = "";
+    this->nationality = NULL;
+    this->resum = "";
     //inicializarDatos();
 }
 //Función que ayuda a guardar los datos ingresados por el usuario.
@@ -81,8 +81,8 @@ void Candidato::setNumPassport(int numPassport) {
 }
 
 Candidato::Candidato(string name, int age, string urlLinkedIn, string urlGitHub, int numPassport,
-                     Candidato *nacionality) : name(name), age(age), urlLinkedIn(urlLinkedIn), urlGitHub(urlGitHub), numPassport(numPassport), &nacionality {
-
+                     Nationality *nacionality) : name(name), age(age), urlLinkedIn(urlLinkedIn), urlGitHub(urlGitHub), numPassport(numPassport) {
+    this->nationality = nacionality;
 }
 
 Nationality *Candidato::getNationality() const {

@@ -52,7 +52,7 @@ public:
     void setNationality(Nationality *nacionality);
     void setResum(const string &resum);
 
-    Candidato(string name, int age, string urlLinkedIn, string urlGitHub, int numPassport, Candidato *nacionality);
+    Candidato(string name, int age, string urlLinkedIn, string urlGitHub, int numPassport, Nationality *nacionality);
 
     void mostrarDatos();
 };
