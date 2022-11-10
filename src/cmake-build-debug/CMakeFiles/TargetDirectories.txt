@@ -1,0 +1,4 @@
+C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/src/cmake-build-debug/CMakeFiles/Project_run.dir
+C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/src/cmake-build-debug/CMakeFiles/Project_lib.dir
+C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir

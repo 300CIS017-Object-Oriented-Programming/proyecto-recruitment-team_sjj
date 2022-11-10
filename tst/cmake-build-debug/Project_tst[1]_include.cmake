@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug/Project_tst[1]_tests.cmake")
+  include("C:/Users/jfmun/github curso/recruiterSoftware/proyecto-recruitment-team_sjj/tst/cmake-build-debug/Project_tst[1]_tests.cmake")
+else()
+  add_test(Project_tst_NOT_BUILT Project_tst_NOT_BUILT)
+endif()
